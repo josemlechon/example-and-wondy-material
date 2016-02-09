@@ -1,0 +1,11 @@
+<resources>
+
+
+    <style name="textInfo">
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:singleLine">false</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_margin">@dimen/text_margin</item>
+    </style>
+
+</resources>

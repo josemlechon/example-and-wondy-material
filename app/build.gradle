@@ -1,0 +1,81 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "com.example.wondy"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+
+        buildConfigField "String", "SERVER_URL", "\"https://www.dropbox.com/s/\""
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            resValue "string", "google_maps_key", " ADD YOUR OWN API KEY" //todo add api with credentials
+        }
+
+        debug{
+            resValue "string", "google_maps_key", "AIzaSyDZ46yn-dTcu3H6yT9nsSa1k8JpffsCOaI"
+        }
+    }
+
+    productFlavors {
+        flavorLive {
+            applicationId 'com.jml.example.live'
+            resValue "string", "app_label", "Wondy"
+        }
+        flavorBeta {
+            applicationId 'com.jml.example.beta'
+            resValue "string", "app_label", "Wondy Beta"
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+    }
+}
+
+dependencies {
+
+    //Google
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:design:23.1.1'
+    compile 'com.google.android.gms:play-services-maps:8.4.0'
+
+
+    //Dagger
+    apt 'com.google.dagger:dagger-compiler:2.0'
+    compile 'com.google.dagger:dagger:2.0'
+    provided 'com.google.dagger:dagger-compiler:2.0'
+    androidTestApt 'com.google.dagger:dagger-compiler:2.0'
+
+    //Retrofit
+    compile 'com.squareup.retrofit:retrofit:2.0.0-beta2'
+    compile 'com.squareup.retrofit:converter-jackson:2.0.0-beta2'
+    compile 'com.squareup.okhttp:logging-interceptor:2.6.0'
+    provided 'org.glassfish:javax.annotation:10.0-b28'
+
+
+    //Others
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.github.bumptech.glide:glide:3.6.1'
+    compile 'org.apache.commons:commons-lang3:3.4'
+
+    //Test
+    testCompile 'junit:junit:4.12'
+
+
+
+}

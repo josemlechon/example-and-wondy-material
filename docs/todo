@@ -1,0 +1,18 @@
+todo list 6, done 6
+--------------------
+
+- (done) Una tabbar o menú lateral.
+- (done) Un listado de los centros con acceso a la pantalla de detalle desde cada celda.
+- (done) Un mapa de los centros con acceso a la pantalla de detalle desde cada pin.
+- (done) Una pantalla de detalle del centro que tenga un collectionView de fotos, y el resto de información del centro.
+- (done) Una pantalla de perfil, con información estática, que permite añadir la foto de perfil y la guarde en local.
+- (done) La información se debe leer y parsear des este servicio: https://www.dropbox.com/s/b338h2kcx1vg04o/wondy.json?raw=1
+
+
+Se valorará:
+
+- Funcionalidades requeridas implementadas.
+- Una buena estructura de código
+- Una buena justificación de código
+- Una buena arquitectura de la información (UX)
+- Una buena presentación

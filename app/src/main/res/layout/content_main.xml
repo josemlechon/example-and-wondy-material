@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:tools="http://schemas.android.com/tools">
+
+    <fragment
+        android:id="@+id/fragment_map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="ui.home.MainActivity"/>
+
+    <com.example.wondy.ui.widget.DraggableView
+        xmlns:draggable="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        draggable:body_view="@+id/view_body"
+        draggable:draggable_view="@+id/toolbar_list"
+        draggable:hide_view="@+id/layout_centers_list"
+        >
+
+        <View
+            android:id="@+id/view_body"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            />
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:clickable="true">
+
+            <TextView
+                android:id="@+id/text_label_centers"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:gravity="center"
+                android:text="@string/centers"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                />
+
+        </android.support.v7.widget.Toolbar>
+
+        <fragment
+            android:id="@+id/layout_centers_list"
+            android:name="com.example.wondy.ui.home.ListCentersFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+
+            />
+
+    </com.example.wondy.ui.widget.DraggableView>
+</merge>

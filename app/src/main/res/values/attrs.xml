@@ -1,0 +1,24 @@
+<resources>
+
+
+	<attr name="ratio" format="float" />
+	<attr name="responsive" format="boolean" />
+
+	<declare-styleable name="ResponsiveImageView">
+		<attr name="ratio"/>
+		<attr name="responsive"/>
+	</declare-styleable>
+
+	<declare-styleable name="FixedAspectFrameLayout">
+		<attr name="ratio"/>
+	</declare-styleable>
+
+
+	<declare-styleable name="DraggableView">
+		<attr name="half_screen" format="boolean" />
+		<attr name="draggable_view" format="reference" />
+		<attr name="body_view" format="reference" />
+		<attr name="hide_view" format="reference" />
+
+	</declare-styleable>
+</resources>

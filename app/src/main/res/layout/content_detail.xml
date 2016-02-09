@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.wondy.ui.detail.DetailActivity"
+    tools:showIn="@layout/activity_detail">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textview_description"
+            style="@style/textInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:id="@+id/textview_services"
+            style="@style/textInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview_images"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/detail_images_height"
+            />
+
+
+        <TextView
+            android:id="@+id/textview_address"
+            style="@style/textInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_action_map"
+            android:drawableStart="@drawable/ic_action_map"
+            />
+
+        <com.example.wondy.ui.widget.images.ResponsiveImageView
+            android:id="@+id/imageview_map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            app:ratio="1"
+            app:responsive="true"
+            />
+
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
